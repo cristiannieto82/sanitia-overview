@@ -2,7 +2,7 @@
 
 > **Overview repo.** The source code is private. This README documents what the product is, how it is built and the engineering decisions behind it. Ask me for a walkthrough or a demo.
 
-**Role:** founder & sole engineer · **Status:** in development, pilot-ready · **Stack:** Next.js · TypeScript · Supabase · Claude
+**Role:** founder & sole engineer · **Status:** in production · **Stack:** Next.js · TypeScript · Supabase · Claude
 
 ## What it is
 
