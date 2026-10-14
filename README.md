@@ -14,14 +14,13 @@
   <img alt="Mastra" src="https://img.shields.io/badge/agents-Mastra%20on%20Cloud%20Run-4b5cc4">
 </p>
 
-> **Overview repo.** The source code is private because SanitIA is a commercial product. This page covers what it is, how it is built and the decisions behind it. Ask me for a demo.
+> **Overview repo.** The source code is private because SanitIA is a commercial product. This page covers what it is, how it is built and the decisions behind it.
 
 ## In 30 seconds
 
 - **What it is:** a SaaS that helps restaurants and food businesses comply with health regulations. Staff log temperatures with a photo, complete checklists and upload evidence; the owner sees what is out of spec and generates a verifiable inspection report.
-- **Status:** in production since 26 September 2026, with restaurants on trial using it daily.
 - **My role:** founder and sole engineer.
-- **What sets it apart:** a ledger nobody can edit, and an AI agent that cannot make up a temperature.
+- **What sets it apart:** the agent can run almost the whole app (30+ tools: create locations and equipment, build and publish checklists, invite staff, schedule visits, send announcements, import spreadsheets), and doing so is safe: every action goes through a plan the person reviews and approves, and if the plan changes before it runs, it does not run.
 
 ## The product
 
@@ -68,7 +67,7 @@ flowchart LR
 
 ### 2. Every write goes through an approved plan
 
-The owner's assistant has 31 tools, but write tools only add steps to a plan. Running it requires the user's approval and a SHA-256 hash of the plan: if the plan changed between preview and execution, it does not run. Text hidden in an imported spreadsheet cannot execute anything.
+The owner's assistant has 30+ tools, but write tools only add steps to a plan. Running it requires the user's approval and a SHA-256 hash of the plan: if the plan changed between preview and execution, it does not run. Text hidden in an imported spreadsheet cannot execute anything.
 
 ```mermaid
 flowchart LR

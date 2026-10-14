@@ -14,14 +14,13 @@
   <img alt="Mastra" src="https://img.shields.io/badge/agentes-Mastra%20en%20Cloud%20Run-4b5cc4">
 </p>
 
-> **Repo de presentación.** El código es privado porque es un producto comercial. Aquí está qué es SanitIA, cómo está construido y las decisiones detrás. Si quieres una demo, escríbeme.
+> **Repo de presentación.** El código es privado porque es un producto comercial. Aquí está qué es SanitIA, cómo está construido y las decisiones detrás.
 
 ## En 30 segundos
 
 - **Qué es:** un SaaS que ayuda a restaurantes y negocios de comida a cumplir la normativa sanitaria. El equipo registra temperaturas con una foto, completa checklists y sube evidencias; el dueño ve qué está fuera de norma y genera un acta de fiscalización verificable.
-- **Estado:** en producción desde el 26 de septiembre de 2026, con restaurantes en prueba que lo usan a diario.
 - **Mi rol:** fundador y único desarrollador.
-- **Lo distintivo:** un registro que nadie puede editar y un agente de IA que no puede inventar una temperatura.
+- **Lo distintivo:** el agente puede operar casi toda la app (más de 30 herramientas: crear locales y equipos, armar y publicar checklists, invitar al equipo, programar visitas, mandar comunicados, importar planillas) y hacerlo es seguro: toda acción pasa por un plan que la persona revisa y aprueba, y si el plan cambia antes de ejecutarse, no corre.
 
 ## El producto
 
@@ -68,7 +67,7 @@ flowchart LR
 
 ### 2. Toda escritura pasa por un plan aprobado
 
-El asistente del dueño tiene 31 herramientas, pero las de escritura solo agregan pasos a un plan. Para ejecutarlo hacen falta la aprobación del usuario y un hash SHA-256 del plan: si el plan cambió entre la vista previa y la ejecución, no corre. Por eso un texto escondido en una planilla importada no puede ejecutar nada.
+El asistente del dueño tiene más de 30 herramientas, pero las de escritura solo agregan pasos a un plan. Para ejecutarlo hacen falta la aprobación del usuario y un hash SHA-256 del plan: si el plan cambió entre la vista previa y la ejecución, no corre. Por eso un texto escondido en una planilla importada no puede ejecutar nada.
 
 ```mermaid
 flowchart LR
